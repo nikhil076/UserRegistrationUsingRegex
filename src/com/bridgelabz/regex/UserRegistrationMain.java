@@ -10,6 +10,8 @@ public class UserRegistrationMain {
 		Scanner scanner = new Scanner(System.in);
 		System.out.println("Enter the First Name :");
 		System.out.println(userRegistrationService.firstNameRegex(scanner.next()));
+		System.out.println("Enter the Last Name :");
+		System.out.println(userRegistrationService.lastNameRegex(scanner.next()));
 	}
 
 }

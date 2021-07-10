@@ -12,4 +12,13 @@ public class UserRegistrationServiceImpl implements UserRegistrationService{
 		Matcher matched = pattern.matcher(firstName);
 		return matched.matches();
 	}
+
+	@Override
+	public boolean lastNameRegex(String lastName) {
+		String firstNameRegex = "^[A-Z][a-z]{3,}";
+		Pattern pattern = Pattern.compile(firstNameRegex);
+		Matcher matched = pattern.matcher(lastName);
+		return matched.matches();
+	}
+
 }
