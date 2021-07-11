@@ -44,7 +44,7 @@ public class UserRegistrationServiceImpl implements UserRegistrationService
 
 	@Override
 	public boolean passwordRegex(String password) {
-		String passwordRegex = ".{8,}";
+		String passwordRegex = "(?=.*?[A-Z]).{8,}";
 		Pattern pattern = Pattern.compile(passwordRegex);
 		Matcher matched = pattern.matcher(password);
 		return matched.matches();
