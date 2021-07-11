@@ -3,10 +3,12 @@ package com.bridgelabz.regex;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public class UserRegistrationServiceImpl implements UserRegistrationService{
+public class UserRegistrationServiceImpl implements UserRegistrationService
+{
 
 	@Override
-	public boolean firstNameRegex(String firstName) {
+	public boolean firstNameRegex(String firstName)
+	{
 		String firstNameRegex = "^[A-Z][a-z]{3,}";
 		Pattern pattern = Pattern.compile(firstNameRegex);
 		Matcher matched = pattern.matcher(firstName);
@@ -14,11 +16,20 @@ public class UserRegistrationServiceImpl implements UserRegistrationService{
 	}
 
 	@Override
-	public boolean lastNameRegex(String lastName) {
+	public boolean lastNameRegex(String lastName)
+	{
 		String firstNameRegex = "^[A-Z][a-z]{3,}";
 		Pattern pattern = Pattern.compile(firstNameRegex);
 		Matcher matched = pattern.matcher(lastName);
 		return matched.matches();
 	}
 
+	@Override
+	public boolean emailRegex(String email) 
+	{
+		String emailRegex = "^[a-zA-Z0-9_!#$%&'*+/=?`{|}~^.-]+@[a-zA-Z0-9.-]+$";
+		Pattern pattern = Pattern.compile(emailRegex);
+		Matcher matched = pattern.matcher(email);
+		return matched.matches();
+	}
 }
