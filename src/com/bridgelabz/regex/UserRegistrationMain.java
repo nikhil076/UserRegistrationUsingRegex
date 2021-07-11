@@ -50,5 +50,8 @@ public class UserRegistrationMain
 		{
 			System.out.println(string+" :"+userRegistrationService.emailRegex(string));
 		}
+		
+		System.out.println("Enter phone Number :");
+		System.out.println(userRegistrationService.phoneNumberRegex(scanner.next()));
 	}
 }
