@@ -7,4 +7,5 @@ public interface UserRegistrationService
 	public boolean lastNameRegex(String lastName);
 	public boolean emailRegex(String email);
 	public boolean phoneNumberRegex(String phoneNumber);
+	public boolean passwordRegex(String password); 
 }

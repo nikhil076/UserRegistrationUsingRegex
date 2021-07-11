@@ -53,5 +53,8 @@ public class UserRegistrationMain
 		
 		System.out.println("Enter phone Number :");
 		System.out.println(userRegistrationService.phoneNumberRegex(scanner.next()));
+		
+		System.out.println("Enter the password :");
+		System.out.println(userRegistrationService.passwordRegex(scanner.next()));
 	}
 }
